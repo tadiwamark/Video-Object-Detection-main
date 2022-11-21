@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 
 #Loading the VGG16 model
 model= VGG16(weights='imagenet')
-st.markdown('<style>body{background-color:Blue;}</style>',unsafe_allow_html=True)
+st.markdown('<style>body{background-color:Orange;}</style>',unsafe_allow_html=True)
 
 
 
@@ -76,7 +76,7 @@ def main():
     st.text("InceptionV3")
 
     
-    choice = option_menu("Main Menu",["Home","Upload","About"],icons = ["house","cloud_upload","list-task"],menu_icon ="cast",default_index = 0,orientation = "horizontal")
+    choice = option_menu("Main Menu",["Home","Upload"],icons = ["house","cloud_upload"],menu_icon ="cast",default_index = 0,orientation = "horizontal")
     
     if choice == "Upload":
         st.subheader("Upload Your Video")
@@ -137,7 +137,6 @@ def main():
 
     elif choice == "Home":
         st.subheader("Detect Objects In Video")
-        st.image("./ai.png")
     
     elif choice == "About":
         st.text('Object detection')
