@@ -6,3 +6,6 @@ https://colab.research.google.com/drive/1AzjTWpIimKDen6suPQL9huj3TfY3dygD?usp=sh
 
 # Link to Website
 https://tadiwamark-video-object-detection-streamlit-app-c11b1z.streamlit.app/
+
+# Link to video explanation
+https://youtu.be/PngB73ErVZ8
