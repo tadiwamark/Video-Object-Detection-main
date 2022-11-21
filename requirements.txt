@@ -7,4 +7,3 @@ tensorflow
 numpy
 opencv-python-headless
 matplotlib
-VGG16
