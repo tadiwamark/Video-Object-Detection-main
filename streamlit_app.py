@@ -7,7 +7,7 @@ import sys
 from streamlit_option_menu import option_menu
 
 #Loading the VGG16 model
-model= VGG16(weights='imagenet')
+model= load_model('model.h5',compile=(False))
 st.markdown('<style>body{background-color:Orange;}</style>',unsafe_allow_html=True)
 
 
@@ -58,7 +58,9 @@ def object_detection(search_key,frame, model):
         if label.find(search_key) > -1:
             sys.exit( st.image(frame, caption=label))
         else:
-            st.text('Not found')  
+            st.text("frame not found")
+             
+             
            
 
     except:
@@ -67,7 +69,7 @@ def object_detection(search_key,frame, model):
             
         
 
-
+     
 
 # Main App
 def main():
@@ -76,7 +78,7 @@ def main():
     st.text("InceptionV3")
 
     
-    choice = option_menu("Main Menu",["Home","Upload"],icons = ["house","cloud_upload"],menu_icon ="cast",default_index = 0,orientation = "horizontal")
+    choice = option_menu("Main Menu",["Home","Upload","About"],icons = ["house","cloud_upload","list-task"],menu_icon ="cast",default_index = 0,orientation = "horizontal")
     
     if choice == "Upload":
         st.subheader("Upload Your Video")
